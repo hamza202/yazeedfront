@@ -1,0 +1,49 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%; }
+
+.wrapper {
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  flex: 1; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.wrapper.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; }
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 0px;
+  width: 100%;
+  line-height: 25px;
+  /* Vertically center the text there */ }
+  footer > div {
+    flex: 1; }
+  footer .contact .link {
+    color: #A9C4C4;
+    text-decoration-line: none;
+    font-size: 16px; }
+  footer .contact li {
+    display: inline-block;
+    margin-right: 5%; }
+    footer .contact li:last-child {
+      margin-right: 0px; }
+
+@media only screen and (min-width: 29.8125rem) {
+  footer {
+    justify-content: space-around; } }
+@media only screen and (min-width: 77.5rem) {
+  footer {
+    justify-content: space-evenly; } }
+
+/*# sourceMappingURL=stickyFooter.css.map */

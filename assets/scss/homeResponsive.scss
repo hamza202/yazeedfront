@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+
+@media screen and (max-width: 991px) {
+    header.homeHeader nav  {
+        background: $mainColor;
+    }
+}
+
+
+@media(max-width:767px) {
+    header.homeHeader .headerSlider {
+        .swap {
+            display: none;
+        }
+        .item {
+        }
+        .social {
+            right: 0;
+            left: 0;
+            transform: translateX(0%);
+            top: auto;
+            bottom: 26px;
+            // top: 65px;
+            flex-direction: row;
+            max-width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            li a {
+                margin: 10px;
+                margin-top: 0;
+            }
+            .hr {
+                width: 0px;
+                height: 0px;
+                background: #fff;
+                border: none;
+                margin: 0 15px;
+            }
+        }
+        .owl-dots {
+            right: 0;
+            left: 0;
+            transform: translateX(2%);
+            top: auto;
+            bottom: 26px;
+            flex-direction: row;
+            max-width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            .owl-dot {
+                margin-right: 30px;
+                margin-top: 0;
+            }
+        }
+    }
+}

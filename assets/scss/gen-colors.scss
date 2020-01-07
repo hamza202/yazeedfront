@@ -1,0 +1,41 @@
+@import './variables.scss';
+@import "../css/scss/_functions.scss";
+@import "../css/scss/_variables.scss";
+@import "../css/scss/mixins/_breakpoints.scss";
+// Generate Colors (text color, backgrounds)
+$colors-map: (
+        mainColor: $mainColor,
+        lightMainColor: $lightMainColor,
+        primaryColor: $primary,
+        darkGrayText:$darkGrayText,
+        primary: $primary,
+        grayColor: $grayColor,
+        lightGray: $lightGray,
+        grayText: $grayText,
+        headerText: $headerText,
+        whiteColor: $whiteColor,
+        yellow: $yellow,
+        errorColor: $errorColor,
+        lightError: $backError
+);
+
+@each $name, $color in $colors-map {
+  .bg-#{$name} {
+    background: $color;
+  }
+  .color-#{$name} {
+    color: $color;
+  }
+  .transparent-bg#{$name} {
+    background-color: rgba($color, 0.7);
+  }
+}
+
+@for $j from 10 to 31 {
+  .fs-#{$j} {
+    font-size: $j+px !important;
+    @include media-breakpoint-down(md) {
+      font-size: $j - 2 + px !important;
+    }
+  }
+}
